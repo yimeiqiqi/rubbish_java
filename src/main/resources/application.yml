@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: rubbish-java
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 228813
+    url: jdbc:mysql://localhost:3306/rubbish?characterEncoding=utf8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  global-config:
+    banner: false #去掉启动时图形化页面
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #将日志输出到控制台
+    map-underscore-to-camel-case: true #支持下划线到驼峰的映射

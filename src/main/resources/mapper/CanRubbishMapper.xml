@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tjut.rubbish_java.mapper.CanRubbishMapper">
+    <select id="selectIdFromRubbish" resultType="integer">
+        select cr.can_id
+        from can_rubbish cr,rubbish r
+        where cr.rubbish_id = r.rubbish_id and r.rubbish_name=#{rubbishName}
+    </select>
+</mapper>
